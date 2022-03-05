@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,28 +8,34 @@ import DashboardWrapper from "./components/dashboard/DashboardWrapper";
 import Customer from "./screen/Customer";
 import Home from "./screen/Home";
 import './style/app.css'
-function App() {
-  const [darkTheme, setDarkTheme] = useState(true);
-  useEffect(() => {
-    document.body.style.backgroundColor = darkTheme ? "rgb(0, 30, 60)" : "#edf3f7"
-  }, [darkTheme])
 
-  const handleTheme= () =>{
-    setDarkTheme(!darkTheme)
-  }
-  
+
+
+const DarkTheme = createContext()
+
+function App() {
+  const darkTheme = useState(true);
+  useEffect(() => {
+    document.body.style.backgroundColor = darkTheme[0] ? "rgb(0, 30, 60)" : "#edf3f7"
+  }, [darkTheme[0]])
+
+
+
   return (
     <Router>
-      <div className={darkTheme ? "my-dark-theme": "my-light-theme"}>
-        <DashboardWrapper handleTheme={handleTheme}>
-          <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route path="/customers" element={<Customer />}></Route>
-          </Routes >
-        </DashboardWrapper>
-      </div>
+      <DarkTheme.Provider value={darkTheme}>
+        <div className={darkTheme[0] ? "my-dark-theme" : "my-light-theme"}>
+          <DashboardWrapper>
+            <Routes>
+              <Route exact path="/" element={<Home />}></Route>
+              <Route path="/customers" element={<Customer />}></Route>
+            </Routes >
+          </DashboardWrapper>
+        </div>
+      </DarkTheme.Provider>
     </Router>
   );
 }
 
 export default App;
+export { DarkTheme }

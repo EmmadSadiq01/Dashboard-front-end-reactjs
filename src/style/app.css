@@ -115,6 +115,10 @@ body {
   margin-right: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
 .float-right {
   float: right;
 }
@@ -128,6 +132,10 @@ body {
 }
 .my_outlined_btn .MuiButton-root .MuiButton-startIcon svg {
   font-size: 16px;
+}
+
+.my-light-theme .card_light {
+  color: #132f4c;
 }
 
 .body_wrapper {
@@ -398,13 +406,23 @@ body {
 }
 
 .pannel_card {
-  background-color: #132f4c;
-  border: 1px solid #1e4976;
   border-radius: 10px;
-  color: #b2bac2;
   width: 100%;
   height: 100%;
+}
+
+.my-dark-theme .pannel_card {
+  border: 1px solid #1e4976;
+  background-color: #132f4c;
+  color: #b2bac2;
   box-shadow: unset;
+}
+
+.my-light-theme .pannel_card {
+  border: 1px solid transparent;
+  background-color: #cac8eb;
+  color: #b2bac2;
+  box-shadow: 0 0 5px 0 #c6cadb;
 }
 
 .ag-root-wrapper-body.ag-layout-normal {
@@ -426,11 +444,11 @@ body {
   background-color: #172839;
 }
 .ag-theme-alpine-dark .ag-header-viewport .ag-header-row.ag-header-row-column {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffffcc;
 }
 .ag-theme-alpine-dark .ag-row {
   background-color: #1c2e45;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffffcc;
   border-bottom: 0;
 }
 .ag-theme-alpine-dark .ag-row:nth-child(even) {
@@ -450,6 +468,47 @@ body {
   background-color: #1c2e45 !important;
 }
 .ag-theme-alpine-dark .ag-body-viewport {
+  max-height: 330px;
+}
+
+.ag-theme-alpine {
+  max-height: 400px;
+}
+.ag-theme-alpine .ag-root {
+  background-color: #b9cae0;
+}
+.ag-theme-alpine .ag-root-wrapper {
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.ag-theme-alpine .ag-header-viewport {
+  background-color: #b8bdd8;
+}
+.ag-theme-alpine .ag-header-viewport .ag-header-row.ag-header-row-column {
+  color: #132f4c;
+}
+.ag-theme-alpine .ag-row {
+  background-color: #b9cae0;
+  color: #132f4c;
+  border-bottom: 0;
+}
+.ag-theme-alpine .ag-row:nth-child(even) {
+  background: #b8b9d8;
+}
+.ag-theme-alpine .ag-header {
+  position: sticky;
+  top: 0;
+}
+.ag-theme-alpine .ag-menu {
+  background-color: #1c2e45;
+}
+.ag-theme-alpine .ag-header-cell-moving {
+  background-color: #b9cae0 !important;
+}
+.ag-theme-alpine.ag-unselectable.ag-dnd-ghost {
+  background-color: #b9cae0 !important;
+}
+.ag-theme-alpine .ag-body-viewport {
   max-height: 330px;
 }
 

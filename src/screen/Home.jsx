@@ -81,7 +81,7 @@ const Home = () => {
         </Grid>
         <Grid item xs={12}>
           <PanelCard>
-            <div className="card_title card_light d-flex align-items-center justify-content-between">
+            <div className="card_title mb-2 card_light d-flex align-items-center justify-content-between">
               <span>
                 Recent Inquiries
               </span>

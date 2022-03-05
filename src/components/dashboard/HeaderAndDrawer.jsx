@@ -1,14 +1,17 @@
 import { Avatar, Box, Button, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
+import { DarkTheme } from '../../App';
 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav,handleTheme }) => {
+const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
+
     let navigate = useNavigate()
     const [anchorElUser, setAnchorElUser] = useState(null);
+    const darkTheme = useContext(DarkTheme)
 
 
     const handleOpenUserMenu = (event) => {
@@ -85,7 +88,7 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav,handleThe
 
                 <div className="right_actions d-flex align-items-center">
                     <div className="action_item my_outlined_btn ml-1">
-                        <Button variant="outlined" startIcon={<Brightness7Icon />} onClick={handleTheme}>
+                        <Button variant="outlined" startIcon={<Brightness7Icon />} onClick={() => darkTheme[1](!darkTheme[0])}>
                         </Button>
                     </div>
                     <div className="action_item ml-1">
