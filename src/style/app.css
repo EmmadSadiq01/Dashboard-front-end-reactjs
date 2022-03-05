@@ -475,25 +475,25 @@ body {
   max-height: 400px;
 }
 .ag-theme-alpine .ag-root {
-  background-color: #b9cae0;
+  background-color: #fff;
 }
 .ag-theme-alpine .ag-root-wrapper {
   border-radius: 10px;
   border: 1px solid transparent;
 }
 .ag-theme-alpine .ag-header-viewport {
-  background-color: #b8bdd8;
+  background-color: #e2dfdf;
 }
 .ag-theme-alpine .ag-header-viewport .ag-header-row.ag-header-row-column {
   color: #132f4c;
 }
 .ag-theme-alpine .ag-row {
-  background-color: #b9cae0;
+  background-color: #fff;
   color: #132f4c;
   border-bottom: 0;
 }
 .ag-theme-alpine .ag-row:nth-child(even) {
-  background: #b8b9d8;
+  background: #eeebeb;
 }
 .ag-theme-alpine .ag-header {
   position: sticky;
@@ -503,52 +503,53 @@ body {
   background-color: #1c2e45;
 }
 .ag-theme-alpine .ag-header-cell-moving {
-  background-color: #b9cae0 !important;
+  background-color: #fff !important;
 }
 .ag-theme-alpine.ag-unselectable.ag-dnd-ghost {
-  background-color: #b9cae0 !important;
+  background-color: #fff !important;
 }
 .ag-theme-alpine .ag-body-viewport {
   max-height: 330px;
 }
 
-.MuiInputLabel-formControl {
+.my-dark-theme .MuiInputLabel-formControl {
   color: rgba(255, 255, 255, 0.8) !important;
 }
-
-.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+.my-dark-theme .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
   border-color: rgba(255, 255, 255, 0.8) !important;
 }
-.MuiOutlinedInput-root:not(.Mui-focused):hover .MuiOutlinedInput-notchedOutline {
+.my-dark-theme .MuiOutlinedInput-root:not(.Mui-focused):hover .MuiOutlinedInput-notchedOutline {
   border-color: rgba(71, 98, 130, 0.8) !important;
 }
-
-.MuiOutlinedInput-input {
+.my-dark-theme .MuiOutlinedInput-input {
   color: rgba(255, 255, 255, 0.8) !important;
 }
-
-.MuiFormHelperText-root {
+.my-dark-theme .MuiFormHelperText-root {
   color: #d5ab13 !important;
   margin-left: 0px !important;
   position: absolute;
   bottom: -20px;
 }
-
-.Mui-error.MuiInputLabel-formControl {
+.my-dark-theme .Mui-error.MuiInputLabel-formControl {
   color: #d5ab13 !important;
 }
-.Mui-error .MuiOutlinedInput-notchedOutline {
+.my-dark-theme .Mui-error .MuiOutlinedInput-notchedOutline {
   border-color: #d5ab13 !important;
 }
-
-.MuiSelect-iconOutlined {
+.my-dark-theme .MuiSelect-iconOutlined {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.my-dark-theme .MuiPaper-root {
+  background-color: #001e3c !important;
+}
+.my-dark-theme .MuiPaper-root .MuiMenuItem-root {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.MuiPaper-root {
-  background-color: #001e3c !important;
+.my-light-theme .MuiPaper-root {
+  background-color: #edf3f7 !important;
 }
-.MuiPaper-root .MuiMenuItem-root {
+.my-light-theme .MuiPaper-root .MuiMenuItem-root {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 

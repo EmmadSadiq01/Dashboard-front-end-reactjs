@@ -88,7 +88,7 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
 
                 <div className="right_actions d-flex align-items-center">
                     <div className="action_item my_outlined_btn ml-1">
-                        <Button variant="outlined" startIcon={<Brightness7Icon />} onClick={() => darkTheme[1](!darkTheme[0])}>
+                        <Button variant="outlined" startIcon={darkTheme[0] ?<Brightness7Icon /> : <NightsStayIcon/>} onClick={() => darkTheme[1](!darkTheme[0])}>
                         </Button>
                     </div>
                     <div className="action_item ml-1">

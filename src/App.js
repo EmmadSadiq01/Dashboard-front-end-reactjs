@@ -14,9 +14,31 @@ import './style/app.css'
 const DarkTheme = createContext()
 
 function App() {
-  const darkTheme = useState(true);
+  let themeState = true
+  if (localStorage.getItem('darkTheme') !== null) {
+    themeState = JSON.parse(window.localStorage.getItem('darkTheme'))
+  }
+  const darkTheme = useState(themeState);
   useEffect(() => {
+    switch (darkTheme[0]) {
+      case true:
+        document.body.classList.remove("my-light-theme");
+        document.body.classList.add("my-dark-theme");
+        break;
+      case false:
+        document.body.classList.remove("my-dark-theme");
+        document.body.classList.add("my-light-theme");
+        break;
+
+      default:
+        document.body.classList.add("my-dark-theme");
+        break;
+    }
     document.body.style.backgroundColor = darkTheme[0] ? "rgb(0, 30, 60)" : "#edf3f7"
+    window.localStorage.setItem('darkTheme', darkTheme[0])
+    // console.log(JSON.parse(window.localStorage.getItem('darkTheme')))
+    // console.log(darkTheme[0])
+    console.log(themeState)
   }, [darkTheme[0]])
 
 
@@ -24,7 +46,7 @@ function App() {
   return (
     <Router>
       <DarkTheme.Provider value={darkTheme}>
-        <div className={darkTheme[0] ? "my-dark-theme" : "my-light-theme"}>
+        <div>
           <DashboardWrapper>
             <Routes>
               <Route exact path="/" element={<Home />}></Route>

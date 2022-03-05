@@ -10,7 +10,7 @@ const DashboardWrapper = ({ children }) => {
     }
     return (
         <div className="body_wrapper">
-            <HeaderAndDrawer setTogleSideBar={setTogleSideBar} togleSideBar={togleSideBar} handleMobNav={handleMobNav}/>
+            <HeaderAndDrawer setTogleSideBar={setTogleSideBar} togleSideBar={togleSideBar} handleMobNav={handleMobNav} />
             <div className={togleSideBar ? 'body_content togle_side_drawer' : 'body_content'}>
                 {
                     togleMobSideBar && <div className="sideNavOverLay" onClick={handleMobNav}></div>
