@@ -89,10 +89,13 @@ body {
     letter-spacing: 0.2px;
     text-transform: capitalize;
     margin-bottom: 15px;
-    position: sticky;
-    top: 0px;
     z-index: 10001;
     width: fit-content;
+    @media ( min-width: 900px ){
+        position: sticky;
+        top: 0px;
+
+    }
 }
 
 // margin
@@ -130,5 +133,21 @@ body {
 .my-light-theme{
     .card_light {
         color: $card-bg-dark;
+    }
+}
+
+
+
+// hide in mob
+.mob_hidden{
+    @media ( max-width: 900px){
+        display: none !important;
+    }
+}
+// hide in desktop
+
+.md_hidden{
+    @media ( min-width: 900px){
+        display: none !important;
     }
 }

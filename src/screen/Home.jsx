@@ -11,9 +11,9 @@ const Home = () => {
     <>
       <ScreenTitle pageTitle='Dashboard' />
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
                   card_title='Inquiries'
@@ -23,7 +23,7 @@ const Home = () => {
                 />
               </PanelCard>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
                   card_title='Inquiries'
@@ -33,7 +33,7 @@ const Home = () => {
                 />
               </PanelCard>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
                   card_title='Inquiries'
@@ -43,7 +43,7 @@ const Home = () => {
                 />
               </PanelCard>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
                   card_title='Inquiries'
@@ -56,7 +56,7 @@ const Home = () => {
           </Grid>
 
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <PanelCard>
             {/* <div className="card_title color_secondary d-flex align-items-center justify-content-between">
               <span>

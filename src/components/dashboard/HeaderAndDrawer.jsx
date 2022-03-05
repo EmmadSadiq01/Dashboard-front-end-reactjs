@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import { DarkTheme } from '../../App';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -74,7 +75,7 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
                                     })
                                 }
                             </div>
-                            <div className="togle_button" onClick={() => setTogleSideBar(!togleSideBar)}>
+                            <div className="togle_button mob_hidden" onClick={() => setTogleSideBar(!togleSideBar)}>
                                 <i className="fas fa-angle-left"></i>
                             </div>
                         </div>
@@ -82,13 +83,24 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
                 </nav>
             </div>
             <div className={togleSideBar ? 'appTopBar togle_top_bar' : 'appTopBar'}>
-                {/* <div className="left_actions">
-                    <i onClick={handleMobNav}>bars</i>
-                </div> */}
+                <div className="left_actions">
+                    <div className="md_hidden">
+
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={handleMobNav}
+                            edge="start"
+                            sx={{ mr: 2 }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </div>
+                </div>
 
                 <div className="right_actions d-flex align-items-center">
                     <div className="action_item my_outlined_btn ml-1">
-                        <Button variant="outlined" startIcon={darkTheme[0] ?<Brightness7Icon /> : <NightsStayIcon/>} onClick={() => darkTheme[1](!darkTheme[0])}>
+                        <Button variant="outlined" startIcon={darkTheme[0] ? <Brightness7Icon /> : <NightsStayIcon />} onClick={() => darkTheme[1](!darkTheme[0])}>
                         </Button>
                     </div>
                     <div className="action_item ml-1">

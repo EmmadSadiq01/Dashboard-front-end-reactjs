@@ -36,9 +36,6 @@ function App() {
     }
     document.body.style.backgroundColor = darkTheme[0] ? "rgb(0, 30, 60)" : "#edf3f7"
     window.localStorage.setItem('darkTheme', darkTheme[0])
-    // console.log(JSON.parse(window.localStorage.getItem('darkTheme')))
-    // console.log(darkTheme[0])
-    console.log(themeState)
   }, [darkTheme[0]])
 
 
